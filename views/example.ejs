@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Financials</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <link href="example.css" rel="stylesheet" type="text/css">
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TESTING</h1>
+
+<div id="canvas-holder" style="width:50%">
+    <canvas id="chart-area-1"></canvas>
+</div>
+<div id="canvas-holder" style="width:50%">
+    <canvas id="chart-area-2"></canvas>
+</div>
+
+<script>
+    var randomScalingFactor = function () {
+        return Math.round(Math.random() * 100);
+    };
+    var config1 = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                    20,
+                    20,
+                    20,
+                    20,
+                    20,
+                ],
+                backgroundColor: [
+                    window.chartColors.red,
+                    window.chartColors.orange,
+                    window.chartColors.yellow,
+                    window.chartColors.green,
+                    window.chartColors.blue,
+                ],
+                label: 'Dataset 1'
+            }],
+            labels: [
+                'Individuals',
+                'Government',
+                'Companies',
+                'Green',
+                'Blue'
+            ]
+        },
+        options: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Revenue'
+            }   
+        }
+    };
+
+    var config2 = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                    20,
+                    20,
+                    20,
+                    20,
+                    20,
+                ],
+                backgroundColor: [
+                    window.chartColors.red,
+                    window.chartColors.orange,
+                    window.chartColors.yellow,
+                    window.chartColors.green,
+                    window.chartColors.blue,
+                ],
+                label: 'Dataset 1'
+            }],
+            labels: [
+                'Salaries',
+                'Equipment',
+                'Food/Shelter',
+                'Transportation',
+                'Marketing'
+            ]
+        },
+        options: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Expenses'
+            }
+        }
+    };
+
+    window.onload = function () {
+        var ctx = document.getElementById('chart-area-1').getContext('2d');
+        window.myDoughnut = new Chart(ctx, config1);
+        var ctx = document.getElementById('chart-area-2').getContext('2d');
+        window.myDoughnut = new Chart(ctx, config2);
+    };
+
+</script>
+
+
+   
+</body>
+
+</html>
