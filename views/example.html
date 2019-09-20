@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Circle TO | Transparency Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <link href="example.css" rel="stylesheet" type="text/css">
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Circle</h1>
+    <div class="card" style="width: 65em;">
+        <div class="card-body">
+            <h5 class="card-title">Circle TO</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Transparency Report</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore
+                et dolore magna
+                aliqua. Donec adipiscing tristique risus nec feugiat in. Felis eget nunc lobortis mattis aliquam
+                faucibus purus in
+                massa. Fusce id velit ut tortor pretium viverra suspendisse potenti. Consectetur a erat nam at lectus
+                urna duis
+                convallis. Eget felis eget nunc lobortis mattis aliquam. Sit amet consectetur adipiscing elit
+                pellentesque. In metus
+                vulputate eu scelerisque.</p>
+            <div id="canvas-holder" style="width:50%">  
+            <canvas id="chart-area-1"></canvas>
+            </div>
+            <div id="canvas-holder" style="width:50%">
+                <canvas id="chart-area-2"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var randomScalingFactor = function () {
+            return Math.round(Math.random() * 100);
+        };
+        var config1 = {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [
+                        8,
+                        15,
+                        35,
+                        20,
+                        20,
+                    ],
+                    backgroundColor: [
+                        window.chartColors.red,
+                        window.chartColors.purple,
+                        window.chartColors.green,
+                        window.chartColors.blue,
+                        window.chartColors.orange,
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                    'Programming Fees',
+                    'Government Grants',
+                    'Corporate Contributions',
+                    'Donations from Public',
+                    'Sponsorships'
+                ]
+            },
+            options: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Revenue'
+                }
+            }
+        };
+
+        var config2 = {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [
+                        8,
+                        15,
+                        35,
+                        20,
+                        20,
+                    ],
+                    backgroundColor: [
+                        window.chartColors.red,
+                        window.chartColors.purple,
+                        window.chartColors.green,
+                        window.chartColors.blue,
+                        window.chartColors.orange,
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                    'Rent',
+                    'Supplies',
+                    'Professional Fees',
+                    'Advertising',
+                    'Wages'
+                ]
+            },
+            options: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Expenses'
+                }
+            }
+        };
+
+        window.onload = function () {
+            var ctx = document.getElementById('chart-area-1').getContext('2d');
+            window.myDoughnut = new Chart(ctx, config1);
+            var ctx = document.getElementById('chart-area-2').getContext('2d');
+            window.myDoughnut = new Chart(ctx, config2);
+        };
+
+    </script>
+
+
+
+</body>
+
+</html>
