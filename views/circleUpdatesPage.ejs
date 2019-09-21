@@ -1,262 +1,80 @@
 <!doctype html>
 <html>
-
-<head>
-    <title>Circle TO | Updates</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
-    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
-   
-    <link href="circleReportPage.css" rel="stylesheet" type="text/css">
-    <style>
-        canvas {
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-        }
-    </style>
-</head>
-
-<body>
-    <img id="profile-photo"
-        src="https://lh3.googleusercontent.com/xjMcR3n69bnCm_NAtXkCX32Cg76X48FW20m6q0NxCHM6VMPAmF0hmFY8Qqo8E6EA57oQS1se13yih9d3qoLB9Idw6QGFrCI5gVviVPPslGA3MdQNK3uEktHx_gMUi6HQ0OAFGwr7Ie2JoboQcMPev-0vMPGo609lc9-wogWvykbrhJ80g4ClVoNqAahSchggFmOywRF09NApepQVqKKVF9sg6vtLpEdfkNRQFIWlOGcQUZl6tD9PXVcvBiZY1HJX2DNKx-E29IaQVRrgmuglHwjuoCC-8iBISqSVVpPmyvdO3ZhR2ihsfJ3dvdglu1r3NN11wWSkGd1GvsF8wLyQwQKS6XAG-6kQn7reHVwGSbxEy_xibKUvETOiGa0egfZapMlkzhvFNN_U1iJ5xpyyggeg_BKLiKGFvDMlwloo_rldCxxipf7zB1JX7kO6yE2KML7lwrWSpAgZIKUdrjadEJ2AzsEIioZWiQGrd3m-TLVt9GU4xKQeCNsWXJ54T38JX86efytqT84r0Ba0BrkLDEZw8cpRbWOnqhSWQkXgwUpLNTTfnA49dzPo1QMkMFXVU6lOnI4mmRIMtM_PV6EIlTb4yeMh3AiycnO9Adv_8WpRZnhzhYO_W0weZByf5I4oZFWLlpYkMx5P3ORhytX7NW_UOFfJaepjVPet6Ci6UJUl-nwZID8H1w=w539-h487-no"
-        alt="Profile Photo" width="250px">
+    <head>
+        <title>Circle TO | Updates</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+        <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
     
-<img id="logo" src="https://lh3.googleusercontent.com/I4qbIAlHwayi28pPk2a0H9sHVhu_vwYhxM3FmbFJvhbREh37cWE1e_MnTv9eRocOSOWwKNpblRgUZB_3JoADaXfsfuQqjVVx5bgrLgpW4Q-3iwjjcILpuDv-QA5dW9ACk9k9mdBIAe_mnmKesCXP1CL7fn6-bHEhi1yOAlb987glchkWSsoGndkXF4fEid8gJcFqHRjwpcbeJhZEHwyWc0EBz1Yy9DbQokqmhlkqXpLsd2Z6l68CcoVX7-Q_IpDS6_eJkxfIaYSJa01rPXA5JpKAI8TI2kJxxWUWPNPT6TButq9UTpVkpP_46B95O4auyCVg_9WCJR2H6_2ZrbXmSepPG8ANUu5DlLxMzYncvVguh7xXjtILYklB7zDxpKGXiIjgkqtOuGpNENFRDHueH5tKyo-b4FGfOoBztIfj266LLBLpqyRpO3yjFmg5Pi_FQpuljWUblIRlhzQ4cEDjBtSJIL28LtdGyJa9R72CxIysXpux8CxJVC00LMk6xqCv3WncS7ZMePi_LHRbbK62aWBSavzWlBzJg8KctQOQZyvq2WDCJrjc5fz0wBHMMYJ0yCNaXSIbdNoKd63YWPdY9IAqKmjwYYnSBvKriaUOzyrivGsV4j24iVh8yozCqdwj5K5acz8DcKArwBG4z7bEdgQLmHj1j6qdOrFCIWTvXJqfxtDmNoSEXQoqKONmb7qNatNLccrW9yOnXH03px78A3ieQZq8eEyEoukVM7THZTCu3o4=w293-h271-no" alt="Circle Logo" width="250px">
-<h5 id="menu-one">Your Account</h5>
-<h5 id="menu-two">Nearby Projects</h5>
-<h5 id="menu-three">Your Donations</h5>
-</br>
-
-<h5 id="menu-six">Log Out >></h5>
-
-<!-- Card Details -->
-<div class="card" style="width: 65em;">
-<div class="card-body">
-<!-- Section 1 - Overview -->
-    <h2 class="card-title">Circle TO</h2>
-    <h4 class="card-subtitle mb-2 text-muted">Transparency Report</h4>
-    <p class="card-text">Sesame snaps candy brownie candy canes toffee jujubes jelly-o. Jelly jujubes candy canes. Fruitcake icing topping
-    cupcake tart jelly beans apple pie biscuit icing. Sesame snaps candy brownie candy canes toffee jujubes jelly-o. Jelly
-    jujubes candy canes. Fruitcake icing topping cupcake tart jelly beans apple pie biscuit icing.</p>
-
-</br>
-<hr>
-</br>
-
-<!-- Section 2 - Review and Expense Pie Charts -->
-<div class="container">
-<h3>Overview - Revenue and Expenses</h3>
-</br>
-<div id="canvas-holder graph-one" style="width:50%;float:left">
-    <canvas id="chart-area-1"></canvas>
-</div>
-
-<div id="canvas-holder graph-two" style="width:50%;float:right;">
-    <canvas id="chart-area-2"></canvas>
-</div>
-</div>
-
-</br>
-<hr>
-</br>
-
-<!-- Section 3 - Transaction History -->
-<h3 id="transaction-title">Transaction History</h3>
-<button type="button" class="btn btn-outline-dark">Display Revenue</button>
-<button type="button" class="btn btn-outline-dark">Display Expenses</button>
-
-<table style="width:100%">
-    <thead>
-    <tr>
-        <th>Date</th>
-        <th>Description</th>
-        <th>Category</th>
-        <th>Project</th>
-        <th>Amount</th>
-        <th>Verified ID</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    </tbody>       
-</table>
-
-</br>
-<hr>
-</br>
-
-    <h2>Contact Us</h2>
-    <h3>Have a question or comment? Connect with us!</h3>
-</br>
-    <h4>E-mail</h4>
-    <h5>circletoronto@gmail.com</h5>
-</br>
-    <h4>Address</h4>
-    <h5>2234 King St. W</h5>
-    <h5>Toronto, ON</h5>
-</br>
-    <h4>Phone</h4>
-    <h5>(416) 123-1234</h5>
-
-</div>
-</div>
-
-<script>
-    var randomScalingFactor = function () {
-        return Math.round(Math.random() * 100);
-    };
-    var config1 = {
-        type: 'doughnut',
-        data: {
-            datasets: [{
-                data: [
-                    8,
-                    15,
-                    35,
-                    20,
-                    20,
-                ],
-                backgroundColor: [
-                    window.chartColors.red,
-                    window.chartColors.purple,
-                    window.chartColors.green,
-                    window.chartColors.blue,
-                    window.chartColors.orange,
-                ]
-            }],
-            labels: [
-                'Programming Fees',
-                'Government Grants',
-                'Corporate Contributions',
-                'Donations from Public',
-                'Sponsorships'
-            ]
-        },
-        options: {
-            title: {
-                display: true,
-                text: 'Revenue'
-            },
-            legend: {
-                display: false
-            },
-            tooltips: {
-                callbacks: {
-                    label: function (tooltipItem, data) {
-                        return data['labels'][tooltipItem['index']] + ': ' + data['datasets'][0]['data'][tooltipItem['index']] + '%';
-                    }
-                }
+        <link href="circleUpdatePage.css" rel="stylesheet" type="text/css">
+        <style>
+            canvas {
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
             }
-        }
-    };
+        </style>
+    </head>
 
-    var config2 = {
-        type: 'doughnut',
-        data: {
-            datasets: [{
-                data: [
-                    8,
-                    15,
-                    35,
-                    20,
-                    20,
-                ],
-                backgroundColor: [
-                    window.chartColors.red,
-                    window.chartColors.purple,
-                    window.chartColors.green,
-                    window.chartColors.blue,
-                    window.chartColors.orange,
-                ]
-            }],
-            labels: [
-                'Rent',
-                'Supplies',
-                'Professional Fees',
-                'Advertising',
-                'Wages'
-            ]
-        },
-        options: {
-            legend: {
-                display: false
-            },
-            title: {
-                display: true,
-                text: 'Expenses'
-            }
-        }
-    };
+    <body>
+        <img id="profile-photo"
+            src="https://lh3.googleusercontent.com/xjMcR3n69bnCm_NAtXkCX32Cg76X48FW20m6q0NxCHM6VMPAmF0hmFY8Qqo8E6EA57oQS1se13yih9d3qoLB9Idw6QGFrCI5gVviVPPslGA3MdQNK3uEktHx_gMUi6HQ0OAFGwr7Ie2JoboQcMPev-0vMPGo609lc9-wogWvykbrhJ80g4ClVoNqAahSchggFmOywRF09NApepQVqKKVF9sg6vtLpEdfkNRQFIWlOGcQUZl6tD9PXVcvBiZY1HJX2DNKx-E29IaQVRrgmuglHwjuoCC-8iBISqSVVpPmyvdO3ZhR2ihsfJ3dvdglu1r3NN11wWSkGd1GvsF8wLyQwQKS6XAG-6kQn7reHVwGSbxEy_xibKUvETOiGa0egfZapMlkzhvFNN_U1iJ5xpyyggeg_BKLiKGFvDMlwloo_rldCxxipf7zB1JX7kO6yE2KML7lwrWSpAgZIKUdrjadEJ2AzsEIioZWiQGrd3m-TLVt9GU4xKQeCNsWXJ54T38JX86efytqT84r0Ba0BrkLDEZw8cpRbWOnqhSWQkXgwUpLNTTfnA49dzPo1QMkMFXVU6lOnI4mmRIMtM_PV6EIlTb4yeMh3AiycnO9Adv_8WpRZnhzhYO_W0weZByf5I4oZFWLlpYkMx5P3ORhytX7NW_UOFfJaepjVPet6Ci6UJUl-nwZID8H1w=w539-h487-no"
+            alt="Profile Photo" width="250px">
+        
+        <img id="logo" src="https://lh3.googleusercontent.com/I4qbIAlHwayi28pPk2a0H9sHVhu_vwYhxM3FmbFJvhbREh37cWE1e_MnTv9eRocOSOWwKNpblRgUZB_3JoADaXfsfuQqjVVx5bgrLgpW4Q-3iwjjcILpuDv-QA5dW9ACk9k9mdBIAe_mnmKesCXP1CL7fn6-bHEhi1yOAlb987glchkWSsoGndkXF4fEid8gJcFqHRjwpcbeJhZEHwyWc0EBz1Yy9DbQokqmhlkqXpLsd2Z6l68CcoVX7-Q_IpDS6_eJkxfIaYSJa01rPXA5JpKAI8TI2kJxxWUWPNPT6TButq9UTpVkpP_46B95O4auyCVg_9WCJR2H6_2ZrbXmSepPG8ANUu5DlLxMzYncvVguh7xXjtILYklB7zDxpKGXiIjgkqtOuGpNENFRDHueH5tKyo-b4FGfOoBztIfj266LLBLpqyRpO3yjFmg5Pi_FQpuljWUblIRlhzQ4cEDjBtSJIL28LtdGyJa9R72CxIysXpux8CxJVC00LMk6xqCv3WncS7ZMePi_LHRbbK62aWBSavzWlBzJg8KctQOQZyvq2WDCJrjc5fz0wBHMMYJ0yCNaXSIbdNoKd63YWPdY9IAqKmjwYYnSBvKriaUOzyrivGsV4j24iVh8yozCqdwj5K5acz8DcKArwBG4z7bEdgQLmHj1j6qdOrFCIWTvXJqfxtDmNoSEXQoqKONmb7qNatNLccrW9yOnXH03px78A3ieQZq8eEyEoukVM7THZTCu3o4=w293-h271-no" alt="Circle Logo" width="250px">
+        <h5 id="menu-one">Your Account</h5>
+        <h5 id="menu-two">Nearby Projects</h5>
+        <h5 id="menu-three">Your Donations</h5>
+        </br>
 
-    window.onload = function () {
-        var ctx = document.getElementById('chart-area-1').getContext('2d');
-        window.myDoughnut = new Chart(ctx, config1);
-        var ctx = document.getElementById('chart-area-2').getContext('2d');
-        window.myDoughnut = new Chart(ctx, config2);
-    };
+        <h5 id="menu-six">Log Out >></h5>
 
-</script>
+        <!-- Card Details -->
+        <div class="card" style="width: 65em;">
+            <div class="card-body">
+                <h1>Updates</h1>
 
+                <div class="inner-card">
+                    <div class="inner-card-header">
+                        <img class="logo-icon" src="logo-small.png"/>
+                        <h5 class="name">Joyce Reid</h5>
+                        <h5 class="date">Sept 30</h5>
 
-   
-</body>
+                        <h5 class="time-passed">3 days ago</h5>
+
+                        <hr/>
+
+                        <h4>September Update - We've made 20 meals!</h4>
+                        <p>Hi neighbours! Yesterday we had our first meal prep
+                            session. With the help of your donation and
+                            community support, we’ve made 100 meals to
+                            distribute to the underhoused!</p>
+
+                        <img class="content-image" src="meal-prep.jpeg" width="765"/>
+                        
+                        <p>Next up, we’ll be distributing the meals in front of the Moss Park Community Centre. 
+                        <p>Thank you all for your support!</p>
+                        <p>-Circle TO team </p>
+                    </div>
+                </div>
+
+                <div class="inner-card">
+                    <img class="logo-icon" src="logo-small.png"/>
+                    <h5 class="name-two">Joyce Reid</h5>
+                    <h5 class="date-two">Sept 30</h5>
+
+                    <h5 class="time-passed-two">3 days ago</h5>
+
+                    <hr/>
+
+                    <h4>August Update - An Incredible 24 hours!</h4>
+                    <p>Hi Neighbours! It’s been an incredible 24 hours since we started this campaign. We’ve already raised $1,000! Thank you all for supporting this project. We’re excited to start meal prepping and distributing food to the underhoused in our Moss Park community!
+                    <p>Thank you!</p>
+                    <p>-Circle TO team</p>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

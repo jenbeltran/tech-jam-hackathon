@@ -1,0 +1,173 @@
+body {
+	font-family: Roboto;
+	background: #e5e5e5;
+}
+
+hr {
+	border: 1px solid #000000;
+}
+
+#line {
+	position: absolute;
+	left: 0%;
+	right: 0%;
+	top: 49.66%;
+	bottom: 50%;
+	border: 1px solid #000000;
+}
+
+#profile-photo {
+	position: absolute;
+	left: 0.5%;
+	right: 6.26%;
+	top: 20%;
+	bottom: 54.54%;
+}
+
+#menu-one {
+	position: absolute;
+	left: 0.5%;
+	right: 6.26%;
+	top: 60%;
+	bottom: 54.54%;
+	font-weight: bold;
+}
+
+#menu-two {
+	position: absolute;
+	left: 0.5%;
+	right: 6.26%;
+	top: 65%;
+	bottom: 54.54%;
+	font-weight: bold;
+}
+
+#menu-three {
+	position: absolute;
+	left: 0.5%;
+	right: 6.26%;
+	top: 70%;
+	bottom: 54.54%;
+	font-weight: bold;
+}
+
+#menu-four {
+	position: absolute;
+	left: 0.5%;
+	right: 6.26%;
+	top: 75%;
+	bottom: 54.54%;
+	font-weight: bold;
+}
+
+#menu-five {
+	position: absolute;
+	left: 0.5%;
+	right: 6.26%;
+	top: 80%;
+	bottom: 54.54%;
+	font-weight: bold;
+}
+
+#menu-six {
+	position: absolute;
+	left: 0.5%;
+	right: 6.26%;
+	top: 85%;
+	bottom: 54.54%;
+	font-weight: bold;
+}
+
+.card {
+	padding: 40px 75px;
+	position: absolute;
+	height: 1650px;
+	left: 389px;
+	top: 170px;
+	background: #ffffff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin-bottom: 100px;
+}
+
+.card .logo-icon {
+	width: 40px;
+	height: 40px;
+}
+
+.card h1 {
+	font-weight: 300;
+	margin-bottom: 40px;
+}
+
+.card .inner-card {
+	border: 1px solid #c4c4c4;
+	padding: 40px;
+	margin-top: 50px;
+}
+
+.card .inner-card .name {
+	position: absolute;
+	left: 185px;
+	top: 190px;
+	font-weight: 900;
+	color: #6faf06;
+}
+
+.card .inner-card .date {
+	position: absolute;
+	left: 185px;
+	top: 220px;
+	color: #626262;
+}
+
+.card .inner-card .time-passed {
+	position: absolute;
+	left: 800px;
+	top: 220px;
+	color: #626262;
+}
+
+.card .inner-card hr {
+	margin-top: 50px;
+}
+
+.card .inner-card h4 {
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.card .inner-card .content-image {
+	margin-bottom: 20px;
+}
+
+.card .inner-card .name-two {
+	position: absolute;
+	left: 185px;
+	top: 1202px;
+	font-weight: 900;
+	color: #6faf06;
+}
+
+.card .inner-card .date-two {
+	position: absolute;
+	left: 185px;
+	top: 1232px;
+	color: #626262;
+}
+
+.card .inner-card .time-passed-two {
+	position: absolute;
+	left: 800px;
+	top: 1232px;
+	color: #626262;
+}
+
+.container {
+	margin-bottom: 250px;
+	padding-bottom: 0px;
+}
+
+button {
+	margin-bottom: 20px;
+	padding-bottom: 0px;
+}
