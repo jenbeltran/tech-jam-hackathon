@@ -19,6 +19,7 @@ router.get('/', (req, res, next) => {
 	res.render('circleUpdatesPage');
 });
 
+// Report Overview Page
 router.get('/reports', tdBankRoute.get);
 
 module.exports = router;
