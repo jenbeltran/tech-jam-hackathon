@@ -13,7 +13,7 @@ let router = express.Router();
 
 // Login Page
 router.get('/', (req, res, next) => {
-	res.render('example');
+	res.render('circleReportPage');
 });
 
 module.exports = router;

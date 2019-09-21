@@ -3,11 +3,13 @@
 
 <head>
     <title>Circle TO | Transparency Report</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
     <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
-    <link href="example.css" rel="stylesheet" type="text/css">
+   
+    <link href="circleReportPage.css" rel="stylesheet" type="text/css">
     <style>
         canvas {
             -moz-user-select: none;
@@ -18,109 +20,121 @@
 </head>
 
 <body>
-<h1>Circle</h1>
+<img id="logo" src="https://lh3.googleusercontent.com/I4qbIAlHwayi28pPk2a0H9sHVhu_vwYhxM3FmbFJvhbREh37cWE1e_MnTv9eRocOSOWwKNpblRgUZB_3JoADaXfsfuQqjVVx5bgrLgpW4Q-3iwjjcILpuDv-QA5dW9ACk9k9mdBIAe_mnmKesCXP1CL7fn6-bHEhi1yOAlb987glchkWSsoGndkXF4fEid8gJcFqHRjwpcbeJhZEHwyWc0EBz1Yy9DbQokqmhlkqXpLsd2Z6l68CcoVX7-Q_IpDS6_eJkxfIaYSJa01rPXA5JpKAI8TI2kJxxWUWPNPT6TButq9UTpVkpP_46B95O4auyCVg_9WCJR2H6_2ZrbXmSepPG8ANUu5DlLxMzYncvVguh7xXjtILYklB7zDxpKGXiIjgkqtOuGpNENFRDHueH5tKyo-b4FGfOoBztIfj266LLBLpqyRpO3yjFmg5Pi_FQpuljWUblIRlhzQ4cEDjBtSJIL28LtdGyJa9R72CxIysXpux8CxJVC00LMk6xqCv3WncS7ZMePi_LHRbbK62aWBSavzWlBzJg8KctQOQZyvq2WDCJrjc5fz0wBHMMYJ0yCNaXSIbdNoKd63YWPdY9IAqKmjwYYnSBvKriaUOzyrivGsV4j24iVh8yozCqdwj5K5acz8DcKArwBG4z7bEdgQLmHj1j6qdOrFCIWTvXJqfxtDmNoSEXQoqKONmb7qNatNLccrW9yOnXH03px78A3ieQZq8eEyEoukVM7THZTCu3o4=w293-h271-no" alt="Circle Logo" width="250px">
+<hr id="line">
+<h5 id="menu-one">Overview</h5>
+<h5 id="menu-two">Transaction</h5>
+<h5 id="menu-three">Add/Remove Projects</h5>
+<h5 id="menu-four">Company Profile Settings</h5>
+<h5 id="menu-five">Bank Account</h5>
+<h5 id="menu-six">Log Out >></h5>
+
+<!-- Card Details -->
 <div class="card" style="width: 65em;">
 <div class="card-body">
     <h4 class="card-title">Circle TO</h4>
     <h6 class="card-subtitle mb-2 text-muted">Transparency Report</h6>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna
-        aliqua. Donec adipiscing tristique risus nec feugiat in. Felis eget nunc lobortis mattis aliquam faucibus purus in
-        massa. Fusce id velit ut tortor pretium viverra suspendisse potenti. Consectetur a erat nam at lectus urna duis
-        convallis. Eget felis eget nunc lobortis mattis aliquam. Sit amet consectetur adipiscing elit pellentesque. In metus
-        vulputate eu scelerisque.</p>
+    <p class="card-text">Sesame snaps candy brownie candy canes toffee jujubes jelly-o. Jelly jujubes candy canes. Fruitcake icing topping
+    cupcake tart jelly beans apple pie biscuit icing. Sesame snaps candy brownie candy canes toffee jujubes jelly-o. Jelly
+    jujubes candy canes. Fruitcake icing topping cupcake tart jelly beans apple pie biscuit icing.</p>
 
+</br>
 <hr>
+</br>
 
 <h4>Overview - Revenue and Expenses</h4>
-<div id="canvas-holder" style="width:50%">
+<div id="canvas-holder graph-one" style="width:50%">
     <canvas id="chart-area-1"></canvas>
-</div>
-</td>
-<td>
-<div id="canvas-holder" style="width:50%">
     <canvas id="chart-area-2"></canvas>
 </div>
 
+<div id="canvas-holder graph-two" style="width:50%">
+    <canvas id="chart-area-2"></canvas>
+</div>
+
+</br>
 <hr>
+</br>
+
 
 <h5>Transaction History</h5>
 <button>Show Revenue</button>
 <button>Show Expenses</button>
 <table style="width:100%">
-<thead>
-<tr>
-    <th>Date</th>
-    <th>Description</th>
-    <th>Category</th>
-    <th>Project</th>
-    <th>Amount</th>
-    <th>Verified ID</th>
-</tr>
-</thead>
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Project</th>
+        <th>Amount</th>
+        <th>Verified ID</th>
+    </tr>
+    </thead>
 
-<tbody>
-<tr>
-    <td>01-01-2019</td>
-    <td>Office Supplies</td>
-    <td>Admin</td>
-    <td>Holiday Marketing</td>
-    <td>$40.00</td>
-    <td>1343afdhf5488thgeir3934nfr4993939</td>
-</tr>
-<tr>
-    <td>01-01-2019</td>
-    <td>Office Supplies</td>
-    <td>Admin</td>
-    <td>Holiday Marketing</td>
-    <td>$40.00</td>
-    <td>1343afdhf5488thgeir3934nfr4993939</td>
-</tr>
-<tr>
-    <td>01-01-2019</td>
-    <td>Office Supplies</td>
-    <td>Admin</td>
-    <td>Holiday Marketing</td>
-    <td>$40.00</td>
-    <td>1343afdhf5488thgeir3934nfr4993939</td>
-</tr>
-<tr>
-    <td>01-01-2019</td>
-    <td>Office Supplies</td>
-    <td>Admin</td>
-    <td>Holiday Marketing</td>
-    <td>$40.00</td>
-    <td>1343afdhf5488thgeir3934nfr4993939</td>
-</tr>
-<tr>
-    <td>01-01-2019</td>
-    <td>Office Supplies</td>
-    <td>Admin</td>
-    <td>Holiday Marketing</td>
-    <td>$40.00</td>
-    <td>1343afdhf5488thgeir3934nfr4993939</td>
-</tr>
-<tr>
-    <td>01-01-2019</td>
-    <td>Office Supplies</td>
-    <td>Admin</td>
-    <td>Holiday Marketing</td>
-    <td>$40.00</td>
-    <td>1343afdhf5488thgeir3934nfr4993939</td>
-</tr>
-<tr>
-    <td>01-01-2019</td>
-    <td>Office Supplies</td>
-    <td>Admin</td>
-    <td>Holiday Marketing</td>
-    <td>$40.00</td>
-    <td>1343afdhf5488thgeir3934nfr4993939</td>
-</tr>
-</tbody>
-        
-    </table>
+    <tbody>
+    <tr>
+        <td>01-01-2019</td>
+        <td>Office Supplies</td>
+        <td>Admin</td>
+        <td>Holiday Marketing</td>
+        <td>$40.00</td>
+        <td>1343afdhf5488thgeir3934nfr4993939</td>
+    </tr>
+    <tr>
+        <td>01-01-2019</td>
+        <td>Office Supplies</td>
+        <td>Admin</td>
+        <td>Holiday Marketing</td>
+        <td>$40.00</td>
+        <td>1343afdhf5488thgeir3934nfr4993939</td>
+    </tr>
+    <tr>
+        <td>01-01-2019</td>
+        <td>Office Supplies</td>
+        <td>Admin</td>
+        <td>Holiday Marketing</td>
+        <td>$40.00</td>
+        <td>1343afdhf5488thgeir3934nfr4993939</td>
+    </tr>
+    <tr>
+        <td>01-01-2019</td>
+        <td>Office Supplies</td>
+        <td>Admin</td>
+        <td>Holiday Marketing</td>
+        <td>$40.00</td>
+        <td>1343afdhf5488thgeir3934nfr4993939</td>
+    </tr>
+    <tr>
+        <td>01-01-2019</td>
+        <td>Office Supplies</td>
+        <td>Admin</td>
+        <td>Holiday Marketing</td>
+        <td>$40.00</td>
+        <td>1343afdhf5488thgeir3934nfr4993939</td>
+    </tr>
+    <tr>
+        <td>01-01-2019</td>
+        <td>Office Supplies</td>
+        <td>Admin</td>
+        <td>Holiday Marketing</td>
+        <td>$40.00</td>
+        <td>1343afdhf5488thgeir3934nfr4993939</td>
+    </tr>
+    <tr>
+        <td>01-01-2019</td>
+        <td>Office Supplies</td>
+        <td>Admin</td>
+        <td>Holiday Marketing</td>
+        <td>$40.00</td>
+        <td>1343afdhf5488thgeir3934nfr4993939</td>
+    </tr>
+    </tbody>       
+</table>
 
+</br>
 <hr>
+</br>
 
     <h2>Contact Us</h2>
     <h3>Have a question or comment? Connect with us!</h3>
@@ -134,8 +148,6 @@
 </br>
     <h4>Phone</h4>
     <h5>(416) 123-1234</h5>
-
-
 
 </div>
 </div>
@@ -201,7 +213,7 @@
                     window.chartColors.blue,
                     window.chartColors.orange,
                 ],
-                label: 'Dataset 1'
+                label: 'Dataset 2'
             }],
             labels: [
                 'Rent',
