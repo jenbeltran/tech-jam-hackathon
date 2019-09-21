@@ -1,3 +1,4 @@
+/* For all  */
 body {
 	font-family: Roboto;
 	background: #e5e5e5;
@@ -7,6 +8,7 @@ hr {
 	border: 1px solid #000000;
 }
 
+/* Left Side Navbar */
 #line {
 	position: absolute;
 	left: 0%;
@@ -16,17 +18,27 @@ hr {
 	border: 1px solid #000000;
 }
 
+#logo {
+	position: absolute;
+	width: 15%;
+	left: 2.5%;
+	top: 8%;
+	bottom: 0%;
+}
+
 #profile-photo {
 	position: absolute;
-	left: 0.5%;
+	left: 2.5%;
 	right: 6.26%;
-	top: 20%;
+	top: 25%;
 	bottom: 54.54%;
+	border-radius: 50%;
+	width: 15%;
 }
 
 #menu-one {
 	position: absolute;
-	left: 0.5%;
+	left: 2.5%;
 	right: 6.26%;
 	top: 60%;
 	bottom: 54.54%;
@@ -35,54 +47,74 @@ hr {
 
 #menu-two {
 	position: absolute;
-	left: 0.5%;
+	left: 2.5%;
 	right: 6.26%;
-	top: 65%;
+	top: 67%;
 	bottom: 54.54%;
 	font-weight: bold;
 }
 
 #menu-three {
 	position: absolute;
-	left: 0.5%;
+	left: 2.5%;
 	right: 6.26%;
-	top: 70%;
+	top: 74%;
 	bottom: 54.54%;
 	font-weight: bold;
 }
 
-#menu-four {
+#logout {
 	position: absolute;
-	left: 0.5%;
-	right: 6.26%;
-	top: 75%;
-	bottom: 54.54%;
-	font-weight: bold;
-}
-
-#menu-five {
-	position: absolute;
-	left: 0.5%;
-	right: 6.26%;
-	top: 80%;
-	bottom: 54.54%;
-	font-weight: bold;
-}
-
-#menu-six {
-	position: absolute;
-	left: 0.5%;
+	left: 2.5%;
 	right: 6.26%;
 	top: 85%;
 	bottom: 54.54%;
 	font-weight: bold;
+	color: #2096f3;
 }
 
+.contact {
+	position: absolute;
+	left: 2.5%;
+	right: 6.26%;
+	top: 100%;
+	bottom: 40%;
+	font-family: Roboto;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 17px;
+}
+
+.contact-title {
+	font-weight: bold;
+}
+/* Top Navbar */
+#organization-logo {
+	position: absolute;
+	left: 20.39%;
+	right: 48.72%;
+	top: -1%;
+}
+
+#overview-link {
+	position: absolute;
+	left: 42%;
+	right: 48.72%;
+	top: 13%;
+}
+
+#update-link {
+	position: absolute;
+	left: 55.39%;
+	right: 48.72%;
+	top: 13%;
+}
+/* Report Page */
 .card {
 	position: absolute;
 	height: 1470px;
 	left: 260px;
-	top: 91px;
+	top: 25%;
 	background: #ffffff;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

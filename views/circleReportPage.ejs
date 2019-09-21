@@ -1,36 +1,9 @@
-<!doctype html>
-<html>
+<%- include('./partials/header'); -%>
 
-<head>
-    <title>Circle TO | Transparency Report</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
-    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
-   
-    <link href="circleReportPage.css" rel="stylesheet" type="text/css">
-    <style>
-        canvas {
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-        }
-    </style>
-</head>
+<%- include('./partials/leftSideNavbar'); -%>
 
-<body>
-    <img id="profile-photo"
-        src="https://lh3.googleusercontent.com/xjMcR3n69bnCm_NAtXkCX32Cg76X48FW20m6q0NxCHM6VMPAmF0hmFY8Qqo8E6EA57oQS1se13yih9d3qoLB9Idw6QGFrCI5gVviVPPslGA3MdQNK3uEktHx_gMUi6HQ0OAFGwr7Ie2JoboQcMPev-0vMPGo609lc9-wogWvykbrhJ80g4ClVoNqAahSchggFmOywRF09NApepQVqKKVF9sg6vtLpEdfkNRQFIWlOGcQUZl6tD9PXVcvBiZY1HJX2DNKx-E29IaQVRrgmuglHwjuoCC-8iBISqSVVpPmyvdO3ZhR2ihsfJ3dvdglu1r3NN11wWSkGd1GvsF8wLyQwQKS6XAG-6kQn7reHVwGSbxEy_xibKUvETOiGa0egfZapMlkzhvFNN_U1iJ5xpyyggeg_BKLiKGFvDMlwloo_rldCxxipf7zB1JX7kO6yE2KML7lwrWSpAgZIKUdrjadEJ2AzsEIioZWiQGrd3m-TLVt9GU4xKQeCNsWXJ54T38JX86efytqT84r0Ba0BrkLDEZw8cpRbWOnqhSWQkXgwUpLNTTfnA49dzPo1QMkMFXVU6lOnI4mmRIMtM_PV6EIlTb4yeMh3AiycnO9Adv_8WpRZnhzhYO_W0weZByf5I4oZFWLlpYkMx5P3ORhytX7NW_UOFfJaepjVPet6Ci6UJUl-nwZID8H1w=w539-h487-no"
-        alt="Profile Photo" width="250px">
-    
-<img id="logo" src="https://lh3.googleusercontent.com/I4qbIAlHwayi28pPk2a0H9sHVhu_vwYhxM3FmbFJvhbREh37cWE1e_MnTv9eRocOSOWwKNpblRgUZB_3JoADaXfsfuQqjVVx5bgrLgpW4Q-3iwjjcILpuDv-QA5dW9ACk9k9mdBIAe_mnmKesCXP1CL7fn6-bHEhi1yOAlb987glchkWSsoGndkXF4fEid8gJcFqHRjwpcbeJhZEHwyWc0EBz1Yy9DbQokqmhlkqXpLsd2Z6l68CcoVX7-Q_IpDS6_eJkxfIaYSJa01rPXA5JpKAI8TI2kJxxWUWPNPT6TButq9UTpVkpP_46B95O4auyCVg_9WCJR2H6_2ZrbXmSepPG8ANUu5DlLxMzYncvVguh7xXjtILYklB7zDxpKGXiIjgkqtOuGpNENFRDHueH5tKyo-b4FGfOoBztIfj266LLBLpqyRpO3yjFmg5Pi_FQpuljWUblIRlhzQ4cEDjBtSJIL28LtdGyJa9R72CxIysXpux8CxJVC00LMk6xqCv3WncS7ZMePi_LHRbbK62aWBSavzWlBzJg8KctQOQZyvq2WDCJrjc5fz0wBHMMYJ0yCNaXSIbdNoKd63YWPdY9IAqKmjwYYnSBvKriaUOzyrivGsV4j24iVh8yozCqdwj5K5acz8DcKArwBG4z7bEdgQLmHj1j6qdOrFCIWTvXJqfxtDmNoSEXQoqKONmb7qNatNLccrW9yOnXH03px78A3ieQZq8eEyEoukVM7THZTCu3o4=w293-h271-no" alt="Circle Logo" width="250px">
-<h5 id="menu-one">Your Account</h5>
-<h5 id="menu-two">Nearby Projects</h5>
-<h5 id="menu-three">Your Donations</h5>
-</br>
+<%- include('./partials/topNavbar'); -%>
 
-<h5 id="menu-six">Log Out >></h5>
 
 <!-- Card Details -->
 <div class="card" style="width: 65em;">
@@ -65,8 +38,8 @@
 
 <!-- Section 3 - Transaction History -->
 <h3 id="transaction-title">Transaction History</h3>
-<button type="button" class="btn btn-outline-dark">Display Revenue</button>
-<button type="button" class="btn btn-outline-dark">Display Expenses</button>
+<button type="button" class="btn btn-outline-primary">Display Revenue</button>
+<button type="button" class="btn btn-outline-primary">Display Expenses</button>
 
 <table style="width:100%">
     <thead>
@@ -143,20 +116,7 @@
 </br>
 <hr>
 </br>
-
-    <h2>Contact Us</h2>
-    <h3>Have a question or comment? Connect with us!</h3>
-</br>
-    <h4>E-mail</h4>
-    <h5>circletoronto@gmail.com</h5>
-</br>
-    <h4>Address</h4>
-    <h5>2234 King St. W</h5>
-    <h5>Toronto, ON</h5>
-</br>
-    <h4>Phone</h4>
-    <h5>(416) 123-1234</h5>
-
+ 
 </div>
 </div>
 
