@@ -12,7 +12,12 @@ let router = express.Router();
  */
 
 // Login Page
+
 router.get('/', (req, res, next) => {
+	res.render('circleUpdatesPage');
+});
+
+router.get('/reports', (req, res, next) => {
 	res.render('circleReportPage');
 });
 
