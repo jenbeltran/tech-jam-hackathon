@@ -77,5 +77,6 @@ function tdBankRoute(req, res, next) {
 }
 
 module.exports = {
-	get : tdBankRoute
+	get                 : tdBankRoute,
+	getOrganizationInfo : getOrganizationInfo
 };

@@ -109,6 +109,22 @@ hr {
 	right: 48.72%;
 	top: 13%;
 }
+
+#donate-link {
+	position: absolute;
+	left: 75.39%;
+	right: 48.72%;
+	top: 13%;
+	letter-spacing: 0.185em;
+	color: #1bb14c;
+}
+
+#interac-logo {
+	position: absolute;
+	left: 88%;
+	right: 48.72%;
+	top: 9%;
+}
 /* Report Page */
 .card {
 	position: absolute;

@@ -2,7 +2,8 @@
 'use strict';
 
 let express = require('express'),
-	router = require('./src/router');
+	router = require('./src/router'),
+	organization = require('../tech-jam/src/tdBankData/organizations');
 
 // Create an instance of an express application
 const app = express();

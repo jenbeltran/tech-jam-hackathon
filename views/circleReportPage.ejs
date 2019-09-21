@@ -41,30 +41,31 @@
 <button type="button" class="btn btn-outline-primary">Display Revenue</button>
 <button type="button" class="btn btn-outline-primary">Display Expenses</button>
 
-<table style="width:100%">
+<table class="table">
     <thead>
-    <tr>
-        <th>Date</th>
-        <th>Description</th>
-        <th>Category</th>
-        <th>Project</th>
-        <th>Amount</th>
-        <th>Verified ID</th>
-    </tr>
+        <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Project</th>
+            <th>Amount</th>
+            <th>Verified ID</th>
+        </tr>
     </thead>
-
+    <!-- hard coded for org 0 with project 0 -->
+    <% for(let i=0; i < bankData[0].projects[0].getTxs().length; i++) {%>
     <tbody>
-    <tr>
-        <% for(let i=0; i < bankData.length; i++) {%>
-        <td><%= bankData[2].projects[0].getTxs()[i].originationDateTime%></td>
-        <td><%= bankData[2].projects[0].getTxs()[i].description%></td>
-        <td><%= bankData[2].projects[0].getTxs()[i].categoryTags[0]%></td>
-        <td>Daily Living Project</td>
-        <td><%= bankData[2].projects[0].getTxs()[i].currencyAmount%></td>
-        <td><%= bankData[2].projects[0].getTxs()[i].id%></td>
-        <% } %>
-    </tr>
-    </tbody>       
+        <tr>
+            <th scope="row">1</th>
+            <td><%= bankData[0].projects[0].getTxs()[i].originationDateTime%></td>
+            <td><%= bankData[0].projects[0].getTxs()[i].description%></td>
+            <td><%= bankData[0].projects[0].getTxs()[i].categoryTags[0]%></td>
+            <td>Daily Living Project</td>
+            <td><%= bankData[0].projects[0].getTxs()[i].currencyAmount%></td>
+            <td><%= bankData[0].projects[0].getTxs()[i].id%></td>
+        </tr>
+    </tbody>
+    <% } %>
 </table>
 
 
@@ -78,94 +79,137 @@
     var randomScalingFactor = function () {
         return Math.round(Math.random() * 100);
     };
-    var config1 = {
-        type: 'doughnut',
-        data: {
-            datasets: [{
-                data: [
-                    8,
-                    15,
-                    35,
-                    20,
-                    20,
-                ],
-                backgroundColor: [
-                    window.chartColors.red,
-                    window.chartColors.purple,
-                    window.chartColors.green,
-                    window.chartColors.blue,
-                    window.chartColors.orange,
-                ]
-            }],
-            labels: [
-                'Programming Fees',
-                'Government Grants',
-                'Corporate Contributions',
-                'Donations from Public',
-                'Sponsorships'
-            ]
-        },
-        options: {
-            title: {
-                display: true,
-                text: 'Revenue'
-            },
-            legend: {
-                display: false
-            },
-            tooltips: {
-                callbacks: {
-                    label: function (tooltipItem, data) {
-                        return data['labels'][tooltipItem['index']] + ': ' + data['datasets'][0]['data'][tooltipItem['index']] + '%';
-                    }
-                }
-            }
-        }
-    };
 
-    var config2 = {
-        type: 'doughnut',
-        data: {
-            datasets: [{
-                data: [
-                    8,
-                    15,
-                    35,
-                    20,
-                    20,
-                ],
-                backgroundColor: [
-                    window.chartColors.red,
-                    window.chartColors.purple,
-                    window.chartColors.green,
-                    window.chartColors.blue,
-                    window.chartColors.orange,
-                ]
-            }],
-            labels: [
-                'Rent',
-                'Supplies',
-                'Professional Fees',
-                'Advertising',
-                'Wages'
-            ]
-        },
-        options: {
-            legend: {
-                display: false
-            },
-            title: {
-                display: true,
-                text: 'Expenses'
+    function countTotalCostPerStore(orgData,orgIndex,projectIndex){
+        let uniqueDescriptions=[];
+        let dollarCounts=[];
+        orgData[orgIndex].projects[projectIndex].txs.forEach(tx=>{
+            if(!uniqueDescriptions.includes(tx.description)){ //first time
+                uniqueDescriptions.push(tx.description);
+                dollarCounts.push(tx.currencyAmount)
+            }else{ //other
+                dollarCounts[uniqueDescriptions.indexOf(tx.description)]+= tx.currencyAmount;
             }
-        }
-    };
+        })
+        return { uniqueDescriptions: uniqueDescriptions, dollarCounts: dollarCounts}
+    }
 
     window.onload = function () {
-        var ctx = document.getElementById('chart-area-1').getContext('2d');
-        window.myDoughnut = new Chart(ctx, config1);
-        var ctx = document.getElementById('chart-area-2').getContext('2d');
-        window.myDoughnut = new Chart(ctx, config2);
+
+    fetch('/getOrgData')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            //console.log(myJson);
+            //note, you should pass the CURRENT ACTIVE ORG and project, not the hardcoded
+            let totalCounts =  countTotalCostPerStore(data.orgData,0,0);
+
+            
+            //dummy data
+            var config1 = {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [
+                            8,
+                            15,
+                            35,
+                            20,
+                            20,
+                        ],
+                        backgroundColor: [
+                            window.chartColors.red,
+                            window.chartColors.purple,
+                            window.chartColors.green,
+                            window.chartColors.blue,
+                            window.chartColors.orange,
+                        ]
+                    }],
+                    labels: [
+                        'Programming Fees',
+                        'Government Grants',
+                        'Corporate Contributions',
+                        'Donations from Public',
+                        'Sponsorships'
+                    ]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Revenue'
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        callbacks: {
+                            label: function (tooltipItem, data) {
+                                return data['labels'][tooltipItem['index']] + ': ' + data['datasets'][0]['data'][tooltipItem['index']] + '%';
+                            }
+                        }
+                    }
+                }
+            };
+
+
+            var config2 = {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: totalCounts.dollarCounts,
+                        backgroundColor: [
+                            window.chartColors.red,
+                            window.chartColors.purple,
+                            window.chartColors.green,
+                            window.chartColors.blue,
+                            window.chartColors.orange,
+                            window.chartColors.red,
+                            window.chartColors.purple,
+                            window.chartColors.green,
+                            window.chartColors.blue,
+                            window.chartColors.orange,
+                            window.chartColors.red,
+                            window.chartColors.purple,
+                            window.chartColors.green,
+                            window.chartColors.blue,
+                            window.chartColors.orange,
+                            window.chartColors.red,
+                            window.chartColors.purple,
+                            window.chartColors.green,
+                            window.chartColors.blue,
+                            window.chartColors.orange,
+                            window.chartColors.red,
+                            window.chartColors.purple,
+                            window.chartColors.green,
+                            window.chartColors.blue,
+                            window.chartColors.orange,
+                        ]
+
+                    }],
+                    labels: totalCounts.uniqueDescriptions
+                },
+                options: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Expenses'
+                    }
+                }
+            };
+
+            var ctx = document.getElementById('chart-area-1').getContext('2d');
+            window.myDoughnut = new Chart(ctx, config1);
+            var ctx = document.getElementById('chart-area-2').getContext('2d');
+            window.myDoughnut = new Chart(ctx, config2);
+
+
+        });
+
+
+
     };
 
 </script>
