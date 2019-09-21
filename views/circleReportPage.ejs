@@ -32,8 +32,9 @@
 <!-- Card Details -->
 <div class="card" style="width: 65em;">
 <div class="card-body">
-    <h4 class="card-title">Circle TO</h4>
-    <h6 class="card-subtitle mb-2 text-muted">Transparency Report</h6>
+<!-- Section 1 - Overview -->
+    <h2 class="card-title">Circle TO</h2>
+    <h4 class="card-subtitle mb-2 text-muted">Transparency Report</h4>
     <p class="card-text">Sesame snaps candy brownie candy canes toffee jujubes jelly-o. Jelly jujubes candy canes. Fruitcake icing topping
     cupcake tart jelly beans apple pie biscuit icing. Sesame snaps candy brownie candy canes toffee jujubes jelly-o. Jelly
     jujubes candy canes. Fruitcake icing topping cupcake tart jelly beans apple pie biscuit icing.</p>
@@ -42,24 +43,28 @@
 <hr>
 </br>
 
-<h4>Overview - Revenue and Expenses</h4>
-<div id="canvas-holder graph-one" style="width:50%">
+<!-- Section 2 - Review and Expense Pie Charts -->
+<div class="container">
+<h3>Overview - Revenue and Expenses</h3>
+</br>
+<div id="canvas-holder graph-one" style="width:50%;float:left">
     <canvas id="chart-area-1"></canvas>
-    <canvas id="chart-area-2"></canvas>
 </div>
 
-<div id="canvas-holder graph-two" style="width:50%">
+<div id="canvas-holder graph-two" style="width:50%;float:right;">
     <canvas id="chart-area-2"></canvas>
+</div>
 </div>
 
 </br>
 <hr>
 </br>
 
+<!-- Section 3 - Transaction History -->
+<h3 id="transaction-title">Transaction History</h3>
+<button type="button" class="btn btn-outline-dark">Display Revenue</button>
+<button type="button" class="btn btn-outline-dark">Display Expenses</button>
 
-<h5>Transaction History</h5>
-<button>Show Revenue</button>
-<button>Show Expenses</button>
 <table style="width:100%">
     <thead>
     <tr>
@@ -173,8 +178,7 @@
                     window.chartColors.green,
                     window.chartColors.blue,
                     window.chartColors.orange,
-                ],
-                label: 'Dataset 1'
+                ]
             }],
             labels: [
                 'Programming Fees',
@@ -185,13 +189,13 @@
             ]
         },
         options: {
-            legend: {
-                position: 'top',
-            },
             title: {
                 display: true,
                 text: 'Revenue'
-            }   
+            },
+            legend: {
+                display: false
+            }  
         }
     };
 
@@ -212,8 +216,7 @@
                     window.chartColors.green,
                     window.chartColors.blue,
                     window.chartColors.orange,
-                ],
-                label: 'Dataset 2'
+                ]
             }],
             labels: [
                 'Rent',
@@ -225,7 +228,7 @@
         },
         options: {
             legend: {
-                position: 'top',
+                display: false
             },
             title: {
                 display: true,
