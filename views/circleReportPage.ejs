@@ -55,67 +55,20 @@
 
     <tbody>
     <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
-    </tr>
-    <tr>
-        <td>01-01-2019</td>
-        <td>Office Supplies</td>
-        <td>Admin</td>
-        <td>Holiday Marketing</td>
-        <td>$40.00</td>
-        <td>1343afdhf5488thgeir3934nfr4993939</td>
+        <% for(let i=0; i < bankData.length; i++) {%>
+        <td><%= bankData[2].projects[0].getTxs()[i].originationDateTime%></td>
+        <td><%= bankData[2].projects[0].getTxs()[i].description%></td>
+        <td><%= bankData[2].projects[0].getTxs()[i].categoryTags[0]%></td>
+        <td>Daily Living Project</td>
+        <td><%= bankData[2].projects[0].getTxs()[i].currencyAmount%></td>
+        <td><%= bankData[2].projects[0].getTxs()[i].id%></td>
+        <% } %>
     </tr>
     </tbody>       
 </table>
 
-</br>
-<hr>
-</br>
+
+
 
 
 </div>
