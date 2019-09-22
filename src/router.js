@@ -16,7 +16,7 @@ let orgLib = require('../src/tdBankData/organizations.js');
 
 //Updates Page
 router.get('/', (req, res, next) => {
-	res.render('circleUpdatesPage');
+	res.render('homepage');
 });
 
 //NOTE: ONLY WORKS FOR ORGS FOR 1 PROJECT
