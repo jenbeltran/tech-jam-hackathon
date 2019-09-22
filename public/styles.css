@@ -210,3 +210,26 @@ button {
 	left: 30%;
 	top: 42px;
 }
+
+/* Flag Comments*/
+.flag-body {
+	background: rgba(0, 0, 0, 0.73);
+}
+
+.flag-comments {
+	position: absolute;
+	left: 453px;
+	top: 200px;
+}
+
+.flag-comments-long {
+	position: absolute;
+	left: 453px;
+	top: 110px;
+}
+
+.flag-comments-longest {
+	position: absolute;
+	left: 453px;
+	top: 50px;
+}

@@ -34,7 +34,7 @@ router.get('/getOrgData', (req, res) => {
 	});
 });
 
-// Report Overview Page
+// Fiscal Report Page
 router.get('/reports', orgLib.get);
 
 //Updates Page
@@ -45,6 +45,35 @@ router.get('/updates', (req, res, next) => {
 //Search Nearby
 router.get('/nearby', (req, res, next) => {
 	res.render('nearbyMap');
+});
+
+//Flag Steps
+router.get('/flag1', (req, res, next) => {
+	res.render('flags/flagOne');
+});
+
+router.get('/flag2', (req, res, next) => {
+	res.render('flags/flagTwo');
+});
+
+router.get('/flag3', (req, res, next) => {
+	res.render('flags/flagThree');
+});
+
+router.get('/flag4', (req, res, next) => {
+	res.render('flags/flagFour');
+});
+
+router.get('/flag5', (req, res, next) => {
+	res.render('flags/flagFive');
+});
+
+router.get('/flag6', (req, res, next) => {
+	res.render('flags/flagSix');
+});
+
+router.get('/flag7', (req, res, next) => {
+	res.render('flags/flagSeven');
 });
 
 module.exports = router;
