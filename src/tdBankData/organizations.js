@@ -71,7 +71,7 @@ function getOrganizationInfo() {
 
 function tdBankRoute(req, res, next) {
 	let bankdata = getOrganizationInfo();
-	res.render('circleReportPage', {
+	res.render('reportPage', {
 		bankData : bankdata
 	});
 }

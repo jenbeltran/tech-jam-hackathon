@@ -38,4 +38,9 @@ router.get('/getOrgData', (req, res) => {
 // Report Overview Page
 router.get('/reports', orgLib.get);
 
+//Updates Page
+router.get('/', (req, res, next) => {
+	res.render('updatesPage');
+});
+
 module.exports = router;
