@@ -93,26 +93,32 @@ hr {
 	position: absolute;
 	left: 20.39%;
 	right: 48.72%;
-	top: -1%;
+	top: 11%;
 }
 
 #overview-link {
 	position: absolute;
-	left: 42%;
+	left: 40%;
 	right: 48.72%;
+	top: 13%;
+}
+
+#report-link {
+	position: absolute;
+	left: 50%;
 	top: 13%;
 }
 
 #update-link {
 	position: absolute;
-	left: 55.39%;
+	left: 63.5%;
 	right: 48.72%;
 	top: 13%;
 }
 
 #donate-link {
 	position: absolute;
-	left: 75.39%;
+	left: 80%;
 	right: 48.72%;
 	top: 13%;
 	letter-spacing: 0.185em;
@@ -121,7 +127,7 @@ hr {
 
 #interac-logo {
 	position: absolute;
-	left: 88%;
+	left: 92%;
 	right: 48.72%;
 	top: 9%;
 }

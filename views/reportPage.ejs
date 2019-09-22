@@ -8,20 +8,12 @@
 <!-- Card Details -->
 <div class="card" style="width: 65em;">
 <div class="card-body">
-<!-- Section 1 - Overview -->
-    <h2 class="card-title">Circle TO</h2>
-    <h4 class="card-subtitle mb-2 text-muted">Transparency Report</h4>
-    <p class="card-text">Sesame snaps candy brownie candy canes toffee jujubes jelly-o. Jelly jujubes candy canes. Fruitcake icing topping
-    cupcake tart jelly beans apple pie biscuit icing. Sesame snaps candy brownie candy canes toffee jujubes jelly-o. Jelly
-    jujubes candy canes. Fruitcake icing topping cupcake tart jelly beans apple pie biscuit icing.</p>
 
-</br>
-<hr>
 </br>
 
 <!-- Section 2 - Review and Expense Pie Charts -->
 <div class="container">
-<h3>Overview - Revenue and Expenses</h3>
+<h3>Revenue and Expenses</h3>
 </br>
 <div id="canvas-holder graph-one" style="width:50%;float:left">
     <canvas id="chart-area-1"></canvas>
@@ -39,11 +31,12 @@
 <!-- Section 3 - Transaction History -->
 <h3 id="transaction-title">Transaction History</h3>
 <button type="button" class="btn btn-outline-primary">Display Revenue</button>
-<button type="button" class="btn btn-outline-primary">Display Expenses</button>
+<button type="button" class="btn btn-primary">Display Expenses</button>
 
 <table class="table">
     <thead>
         <tr>
+            <th scope="row"></th>
             <th>Date</th>
             <th>Description</th>
             <th>Category</th>
@@ -56,7 +49,7 @@
     <% for(let i=0; i < bankData[0].projects[0].getTxs().length; i++) {%>
     <tbody>
         <tr>
-            <th scope="row">1</th>
+            <th scope="row"></th>
             <td><%= bankData[0].projects[0].getTxs()[i].originationDateTime%></td>
             <td><%= bankData[0].projects[0].getTxs()[i].description%></td>
             <td><%= bankData[0].projects[0].getTxs()[i].categoryTags[0]%></td>
@@ -67,9 +60,6 @@
     </tbody>
     <% } %>
 </table>
-
-
-
 
 
 </div>
@@ -164,26 +154,25 @@
                             window.chartColors.green,
                             window.chartColors.blue,
                             window.chartColors.orange,
+                            window.chartColors.yellow,
                             window.chartColors.red,
                             window.chartColors.purple,
                             window.chartColors.green,
                             window.chartColors.blue,
                             window.chartColors.orange,
+                            window.chartColors.yellow,
                             window.chartColors.red,
                             window.chartColors.purple,
                             window.chartColors.green,
                             window.chartColors.blue,
                             window.chartColors.orange,
+                            window.chartColors.yellow,
                             window.chartColors.red,
                             window.chartColors.purple,
                             window.chartColors.green,
                             window.chartColors.blue,
                             window.chartColors.orange,
-                            window.chartColors.red,
-                            window.chartColors.purple,
-                            window.chartColors.green,
-                            window.chartColors.blue,
-                            window.chartColors.orange,
+                            window.chartColors.yellow,                         
                         ]
 
                     }],

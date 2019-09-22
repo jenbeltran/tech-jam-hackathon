@@ -13,10 +13,9 @@ let orgLib = require('../src/tdBankData/organizations.js');
 /**
  * Define routes
  */
-
-//Updates Page
-router.get('/', (req, res, next) => {
-	res.render('circleUpdatesPage');
+//Overview Page
+router.get('/overview', (req, res, next) => {
+	res.render('overviewPage');
 });
 
 //NOTE: ONLY WORKS FOR ORGS FOR 1 PROJECT
@@ -37,5 +36,10 @@ router.get('/getOrgData', (req, res) => {
 
 // Report Overview Page
 router.get('/reports', orgLib.get);
+
+//Updates Page
+router.get('/', (req, res, next) => {
+	res.render('updatesPage');
+});
 
 module.exports = router;
