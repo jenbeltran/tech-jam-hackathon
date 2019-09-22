@@ -2,7 +2,11 @@
 <img id="profile-photo" src="profilephoto.png" alt="Profile Photo" width="250px">
 <img id="logo" src="goodneighbour.png" alt="Good Neighbour Logo" width="250px">
 <h5 id="menu-one">Your Account</h5>
-<h5 id="menu-two"><a href='/nearby'>Nearby Projects</a></h5>
+<% if (active === "nearby") { %>
+    <a class="active" id="menu-two" href='/nearby'>Nearby Projects</a>
+<% } else { %>
+    <h5 id="menu-two"><a href='/nearby'>Nearby Projects</a></h5>
+<% } %>
 <h5 id="menu-three">Your Donations</h5>
 <h5 id="logout">Log Out >></h5>
 
