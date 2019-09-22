@@ -131,7 +131,8 @@ hr {
 	right: 48.72%;
 	top: 9%;
 }
-/* Report Page */
+
+/* Card Template */
 .card {
 	position: absolute;
 	height: 1470px;
@@ -141,12 +142,71 @@ hr {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+/* Overview Page */
+#overview-page {
+	position: absolute;
+	left: 260px;
+	top: 25%;
+}
+
+/* Fiscal Report Page */
 .container {
 	margin-bottom: 250px;
 	padding-bottom: 0px;
 }
 
+/* Updates Page */
+#overview-page {
+	position: absolute;
+	left: 260px;
+	top: 25%;
+}
+
+#name {
+	position: absolute;
+	left: 13%;
+	right: 49.71%;
+	top: 6%;
+	bottom: 93.38%;
+	color: #6faf06;
+	font-weight: 900;
+}
+
+#date {
+	position: absolute;
+	left: 13%;
+	right: 49.71%;
+	top: 8.5%;
+	bottom: 90.65%;
+	color: #626262;
+}
+
+#name-two {
+	position: absolute;
+	left: 13%;
+	right: 49.71%;
+	top: 64%;
+	bottom: 93.38%;
+	color: #6faf06;
+	font-weight: 900;
+}
+
+#date-two {
+	position: absolute;
+	left: 13%;
+	right: 49.71%;
+	top: 66.5%;
+	bottom: 90.65%;
+	color: #626262;
+}
+
 button {
 	margin-bottom: 20px;
 	padding-bottom: 0px;
+}
+
+/* Nearby Page */
+#map {
+	left: 30%;
+	top: 42px;
 }

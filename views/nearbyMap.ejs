@@ -1,5 +1,9 @@
 <%- include('./partials/header'); -%>
-    <div id="map" style="width: 500px; height: 400px;"></div>
+
+<%- include('./partials/leftSideNavbar'); -%>
+
+    
+<div id="map" style="width: 700px; height: 500px;"></div>
 
     <script type="text/javascript">
         function getLocation() {
@@ -17,7 +21,7 @@
         //get these from the API
         //urls can be links to the charity using https://... or routes without it.
         var locations = [
-        ['Fred Victor', 43.653626, -79.372972, 1, '/reports'],
+        ['Fred Victor', 43.653626, -79.372972, 1, '/'],
         ['Support The Kids', 43.643943, -79.402247, 2, 'https://www.bing.com/search?q=support+the+kids'],
         ['Rexdale Community Garden', 43.716331, -79.559510, 3, 'https://www.bing.com/search?q=Rexdale+Community+Garden'],
         ];

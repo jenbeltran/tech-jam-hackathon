@@ -27,7 +27,6 @@ router.get('/getOrgData', (req, res) => {
 		promArr.push(org.projects[0].getTxs());
 	});
 	Promise.all(promArr).then((txArr) => {
-		console.log(txArr);
 		txArr.forEach((orgTxs, i) => {
 			orgData[i].projects[0].txs = orgTxs;
 		});
