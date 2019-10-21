@@ -9,6 +9,8 @@ CHALLENGE:
 What innovative financial technologies or capabilities can we create to enable the communities around us?
 
 ----------------------------------------------------------------------------------
+DEVPOST SUBMISSION:
+https://devpost.com/software/the-good-neighbor
 
 PRESENTATION SLIDE DECK:
 https://drive.google.com/open?id=1LPmAFzH4oVj-fU35LzrDJByPWE-iCt8S
